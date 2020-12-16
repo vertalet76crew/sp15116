@@ -1,0 +1,255 @@
+.training {
+  @import "../main/variables";
+  @import "../main/variables.fonts";
+  @import "../main/variables.colors";
+  background: $color-gray;
+
+  &__wrap {
+    margin: 0 auto;
+    padding: 50px 20px;
+    max-width: 336px;
+    @media (min-width: $tablet) {
+      padding: 44px 40px;
+      max-width: 690px;
+    }
+    @media (min-width: $desktop) {
+      padding: 80px;
+      max-width: 860px;
+    }
+    @media (min-width: $desktop-l) {
+      padding: 108px 120px;
+      max-width: 1124px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media (min-width: $tablet) {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    margin-bottom: 30px;
+    @media (min-width: $tablet) {
+      margin-bottom: 0;
+      max-width: 316px;
+    }
+    @media (min-width: $desktop) {
+      max-width: 340px;
+    }
+    @media (min-width: $desktop-l) {
+      max-width: 450px;
+    }
+
+    &_left {
+      background-image: url($img + "/training.png");
+      background-position: right bottom;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-color: #141416;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      width: 100%;
+      box-sizing: border-box;
+      border-radius: 17px;
+      min-height: 208px;
+      padding: 24px 21px;
+      position: relative;
+      cursor: pointer;
+      text-decoration: none;
+      @media (min-width: $tablet) {
+        max-width: 348px;
+        height: 232px;
+        padding: 20px;
+        min-height: 185px;
+        margin-top: 15px;
+      }
+      @media (min-width: $desktop) {
+        margin-top: 0;
+        max-width: 429px;
+        height: 264px;
+        border-radius: 21px;
+        padding: 24px;
+      }
+      @media (min-width: $desktop-l) {
+        max-width: 588px;
+        height: 362px;
+        border-radius: 28px;
+        padding: 24px 30px 25px;
+      }
+
+      &::before {
+        content: "30 мин";
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        background-color: $color-black;
+        width: 40px;
+        height: 18px;
+        border-radius: 9px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $color-white;
+        font-size: $font-size-8;
+        line-height: $line-height-14;
+        @media (min-width: $tablet) {
+          width: 35px;
+          height: 15px;
+          left: 20px;
+          top: 20px;
+        }
+        @media (min-width: $desktop) {
+          width: 44px;
+          height: 20px;
+          font-size: $font-size-10;
+          line-height: $line-height-18;
+          left: 32px;
+          top: 32px;
+        }
+        @media (min-width: $desktop-l) {
+          width: 60px;
+          height: 25px;
+          font-size: $font-size-14;
+          line-height: $line-height-24;
+          left: 40px;
+          top: 24px;
+        }
+      }
+
+      &::after {
+        content: url($img + "/play.svg");
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(22, 18, 81, 0);
+        left: 0;
+        top: 0;
+        opacity: 0;
+        transition: opacity ease 0.2s;
+      }
+
+      &:hover.training__item_left::after {
+        background-color: rgba(22, 18, 81, 0.5);
+        opacity: 1;
+      }
+    }
+  }
+
+  &__title {
+    font-size: $font-size-26;
+    line-height: $line-height-32;
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 500;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 12px;
+      font-size: $font-size-20;
+      line-height: $line-height-26;
+    }
+    @media (min-width: $desktop) {
+      margin-bottom: 16px;
+      font-size: $font-size-26;
+      line-height: $line-height-32;
+    }
+    @media (min-width: $desktop-l) {
+      font-size: $font-size-44;
+      line-height: $line-height-50;
+    }
+  }
+
+  &__text {
+    font-size: $font-size-15;
+    line-height: $line-height-24;
+    display: block;
+    font-weight: 400;
+
+    @media (min-width: $desktop) {
+      font-size: $font-size-14;
+      line-height: $line-height-22;
+    }
+    @media (min-width: $desktop-l) {
+      font-size: $font-size-17;
+      line-height: $line-height-28;
+    }
+  }
+
+  &__subtitle {
+    color: $color-white;
+    margin: 0;
+    margin-top: 10px;
+    font-size: $font-size-17;
+    line-height: $line-height-24;
+    font-weight: 500;
+    @media (min-width: $tablet) {
+      margin-top: 4px;
+      max-width: 240px;
+    }
+    @media (min-width: $desktop) {
+      margin-top: 5px;
+      font-size: $font-size-20;
+      line-height: $line-height-26;
+      max-width: 100%;
+    }
+    @media (min-width: $desktop-l) {
+      max-width: 440px;
+      font-size: $font-size-26;
+      line-height: $line-height-32;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    font-size: $font-size-15;
+    line-height: $line-height-20;
+    font-weight: 500;
+    color: $color-link;
+    text-decoration: none;
+    margin-top: 24px;
+    @media (min-width: $tablet) {
+      margin-top: 28px;
+    }
+    @media (min-width: $desktop) {
+      margin-top: 24px;
+    }
+    @media (min-width: $desktop-l) {
+      font-size: $font-size-17;
+      line-height: $line-height-20;
+    }
+  }
+
+  &__date-container {
+    font-weight: 500;
+    color: $color-white;
+    display: flex;
+    max-width: 154px;
+    justify-content: space-between;
+    font-size: $font-size-15;
+    line-height: $line-height-20;
+    font-family: "Mail_Sans_Roman", sans-serif;
+    flex-direction: column;
+    @media (min-width: $tablet) {
+      flex-direction: row;
+      max-width: 180px;
+    }
+    @media (min-width: $desktop) {
+      max-width: 192px;
+    }
+  }
+  &__devider {
+    display: none;
+    @media (min-width: $tablet) {
+      display: block;
+    }
+  }
+}

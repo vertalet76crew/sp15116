@@ -1,0 +1,126 @@
+.form {
+  @import '../main/variables.fonts';
+  @import '../main/variables.colors';
+  @import '../main/mixin';
+
+  margin: 0;
+  padding: 0;
+
+  &__row {
+    margin-bottom: 12px;
+  }
+
+  &__field {
+    width: 100%;
+    font-family: 'Mail_Sans_Roman', sans-serif;
+    font-size: $font-size-16;
+    line-height: normal;
+    padding: 15px 14px;
+    color: $color-filed;
+    outline: none;
+    border: 1px solid $color-gray;
+    border-radius: 10px;
+    box-sizing: border-box;
+    appearance: none;
+
+    @include placeholder($color-placeholder);
+
+    &:focus {
+      @include placeholder(transparent);
+    }
+
+    &_error {
+      border-color: $color-filed-border-error;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    margin-top: 26px;
+    font-weight: 500;
+    font-size: $font-size-15;
+    line-height: $line-height-20;
+    height: 52px;
+  }
+
+  &__error {
+    padding-top: 10px;
+    margin-bottom: -6px;
+    font-size: $font-size-14;
+    line-height: $line-height-20;
+    color: $color-error;
+  }
+
+  &__checkbox-wrap {
+    display: flex;
+    align-items: center;
+    line-height: $line-height-20;
+    margin-bottom: 19px;
+  }
+
+  &__label {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+  }
+
+  &__checkbox {
+    display: none;
+
+    &-fake {
+      margin-right: 12px;
+      width: 16px;
+      height: 16px;
+      border: 1px solid rgba(0, 16, 61, 0.12);
+      border-radius: 4px;
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+      transition: border-color ease 0.2s;
+      box-sizing: border-box;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-image: url($img + "/checked.svg");
+        background-repeat: no-repeat;
+        width: 16px;
+        height: 16px;
+        opacity: 0;
+        transition: opacity ease 0.2s;
+      }
+    }
+  }
+
+  &__label-text {
+    font-family: 'Mail_Sans_Roman', sans-serif;
+    font-size: $font-size-15;
+    line-height: $line-height-20;
+    color: $color-label;
+    vertical-align: bottom;
+    transition: color ease 0.2s;
+  }
+
+  .form__checkbox:checked + .form__checkbox-fake::after {
+    opacity: 1;
+  }
+
+  .form__checkbox:checked + .form__checkbox-fake {
+    border-color: transparent;
+  }
+
+  .form__checkbox:checked ~ .form__label-text {
+    color: $color-main;
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-family: 'Mail_Sans_Roman', sans-serif;
+    font-weight: 600;
+    font-size: $font-size-17;
+    line-height: $line-height-26;
+    margin-bottom: 12px;
+  }
+}

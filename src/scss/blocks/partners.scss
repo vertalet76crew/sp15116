@@ -1,0 +1,374 @@
+.partners {
+  @import "../main/variables";
+  @import "../main/variables.fonts";
+  @import "../main/variables.colors";
+
+  &__wrap {
+    padding: 60px 40px;
+    @media (max-width: $tablet) {
+      padding: 63px 45px;
+    }
+    @media (max-width: $desktop) {
+      padding: 67px 0 47px;
+    }
+    @media (max-width: $desktop-l) {
+      padding: 90px 0 60px;
+    }
+  }
+
+  &__title {
+    margin: 0 auto;
+    margin-bottom: 24px;
+    text-align: center;
+    font-size: $font-size-20;
+    line-height: $line-height-26;
+    font-family: "Mail_Sans_Roman", sans-serif;
+    color: $color-black;
+    font-weight: 500;
+    @media (min-width: $tablet) {
+      margin-bottom: 30px;
+    }
+    @media (min-width: $desktop) {
+      margin-bottom: 32px;
+      font-size: $font-size-26;
+      line-height: $line-height-32;
+    }
+    @media (min-width: $desktop-l) {
+      font-size: $font-size-34;
+      line-height: $line-height-40;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0 auto;
+    flex-wrap: wrap;
+    max-width: 248px;
+    @media (min-width: $tablet) {
+      padding: 0 40px;
+      max-width: 670px;
+    }
+    @media (min-width: $desktop) {
+      padding: 0 90px;
+      max-width: 860px;
+    }
+    @media (min-width: $desktop-l) {
+      max-width: 1085px;
+      padding: 0 130px;
+    }
+
+    &_short {
+      &::after {
+        order: 17;
+      }
+
+      &::after,
+      &::before {
+        background: transparent;
+        width: 145px;
+        height: 64px;
+        @media (min-width: $tablet) {
+          content: "";
+          width: 96px;
+          height: 50px;
+          margin-bottom: 20px;
+        }
+        @media (min-width: $desktop) {
+          width: 126px;
+          height: 64px;
+          margin-bottom: 20px;
+          max-width: 126px;
+        }
+        @media (min-width: $desktop-l) {
+          width: 160px;
+          height: 82px;
+          margin-bottom: 25px;
+          max-width: 160px;
+        }
+      }
+    }
+  }
+
+  &__item {
+    border: 1px solid #c0c6da;
+    box-sizing: border-box;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 116px;
+    height: 60px;
+    margin-bottom: 8px;
+
+    &-1 {
+      background: url($img + "/partner-1.svg") no-repeat center;
+      background-size: 78px 21px;
+
+      @media (min-width: $tablet) {
+        background-size: 65px 17px;
+      }
+      @media (min-width: $desktop) {
+        background-size: 76px 20px;
+      }
+      @media (min-width: $desktop-l) {
+        background-size: 107px 28px;
+      }
+    }
+
+    &-2 {
+      background: url($img + "/partner-2.svg") no-repeat center;
+      background-size: 80px 25px;
+
+      @media (min-width: $tablet) {
+        background-size: 69px 20px;
+      }
+      @media (min-width: $desktop) {
+        background-size: 81px 23px;
+      }
+      @media (min-width: $desktop-l) {
+        background-size: 97px 30px;
+      }
+    }
+
+    &-3 {
+      background: url($img + "/partner-3.svg") no-repeat center;
+      background-size: 90px 31px;
+
+      @media (min-width: $tablet) {
+        background-size: 80px 24px;
+      }
+      @media (min-width: $desktop) {
+        background-size: 100px 30px;
+      }
+      @media (min-width: $desktop-l) {
+        background-size: 123px 42px;
+      }
+    }
+
+    &-4 {
+      background: url($img + "/partner-4.svg") no-repeat center;
+      background-size: 98px 18px;
+
+      @media (min-width: $tablet) {
+        background-size: 86px 15px;
+      }
+      @media (min-width: $desktop) {
+        background-size: 106px 18px;
+      }
+      @media (min-width: $desktop-l) {
+        background-size: 138px 25px;
+      }
+    }
+
+    &-5 {
+      background: url($img + "/partner-5.svg") no-repeat center;
+      background-size: 95px 31px;
+
+      @media (min-width: $tablet) {
+        background-size: 76px 26px;
+      }
+      @media (min-width: $desktop) {
+        background-size: 89px 28px;
+      }
+      @media (min-width: $desktop-l) {
+        background-size: 130px 43px;
+      }
+    }
+
+    &-6 {
+      background: url($img + "/partner-6.svg") no-repeat center;
+      background-size: 67px 34px;
+
+      @media (min-width: $tablet) {
+        background-size: 53px 27px;
+      }
+      @media (min-width: $desktop) {
+        background-size: 63px 32px;
+      }
+      @media (min-width: $desktop-l) {
+        background-size: 91px 46px;
+      }
+    }
+
+    &-7 {
+      background: url($img + "/partner-7.svg") no-repeat center;
+      background-size: 92px 14px;
+
+      @media (min-width: $tablet) {
+        background-size: 87px 13px;
+      }
+      @media (min-width: $desktop) {
+        background-size: 101px 15px;
+      }
+      @media (min-width: $desktop-l) {
+        background-size: 127px 19px;
+
+        margin-right: 0;
+      }
+    }
+
+    &-8 {
+      background: url($img + "/partner-8.svg") no-repeat center;
+      background-size: 73px 39px;
+
+      @media (min-width: $tablet) {
+        background-size: 61px 32px;
+      }
+      @media (min-width: $desktop) {
+        background-size: 79px 42px;
+      }
+      @media (min-width: $desktop-l) {
+        background-size: 100px 53px;
+      }
+    }
+
+    &-9 {
+      background: url($img + "/partner-9.svg") no-repeat center;
+      background-size: 75px 35px;
+
+      @media (min-width: $tablet) {
+        background-size: 60px 28px;
+      }
+      @media (min-width: $desktop) {
+        background-size: 77px 36px;
+      }
+      @media (min-width: $desktop-l) {
+        background-size: 102px 47px;
+      }
+    }
+
+    &-10 {
+      background: url($img + "/partner-10.svg") no-repeat center;
+      background-size: 78px 30px;
+
+      @media (min-width: $tablet) {
+        background-size: 69px 26px;
+      }
+      @media (min-width: $desktop) {
+        background-size: 88px 33px;
+      }
+      @media (min-width: $desktop-l) {
+        background-size: 106px 41px;
+      }
+    }
+
+    &-11 {
+      background: url($img + "/partner-11.svg") no-repeat center;
+      background-size: 101px 25px;
+
+      @media (min-width: $tablet) {
+        background-size: 79px 20px;
+      }
+      @media (min-width: $desktop) {
+        background-size: 96px 24px;
+      }
+      @media (min-width: $desktop-l) {
+        background-size: 138px 34px;
+      }
+    }
+
+    &-12 {
+      background: url($img + "/partner-12.svg") no-repeat center;
+      background-size: 89px 28px;
+
+      @media (min-width: $tablet) {
+        background-size: 80px 24px;
+      }
+      @media (min-width: $desktop) {
+        background-size: 90px 30px;
+      }
+      @media (min-width: $desktop-l) {
+        background-size: 121px 38px;
+      }
+    }
+
+    &-13 {
+      background: url($img + "/partner-13.svg") no-repeat center;
+      background-size: 88px 24px;
+
+      @media (min-width: $tablet) {
+        background-size: 80px 22px;
+      }
+      @media (min-width: $desktop) {
+        background-size: 94px 26px;
+      }
+      @media (min-width: $desktop-l) {
+        background-size: 128px 35px;
+
+        margin-right: 0;
+      }
+    }
+
+    &-14 {
+      background: url($img + "/partner-14.svg") no-repeat center;
+
+      background-size: 80px 23px;
+
+      @media (min-width: $tablet) {
+        background-size: 70px 20px;
+      }
+      @media (min-width: $desktop) {
+        background-size: 75px 21px;
+      }
+      @media (min-width: $desktop-l) {
+        background-size: 109px 32px;
+      }
+    }
+
+    &-15 {
+      background: url($img + "/partner-15.svg") no-repeat center;
+      background-size: 94px 20px;
+
+      @media (min-width: $tablet) {
+        background-size: 81px 16px;
+      }
+      @media (min-width: $desktop) {
+        background-size: 105px 22px;
+      }
+      @media (min-width: $desktop-l) {
+        background-size: 127px 28px;
+      }
+    }
+
+    &-16 {
+      background: url($img + "/partner-16.svg") no-repeat center;
+      background-size: 55px 30px;
+
+      @media (min-width: $tablet) {
+        background-size: 40px 30px;
+      }
+      @media (min-width: $desktop) {
+        background-size: 63px 47px;
+      }
+      @media (min-width: $desktop-l) {
+        background-size: 75px 56px;
+      }
+    }
+
+    @media (min-width: $tablet) {
+      width: 96px;
+      height: 50px;
+      margin-bottom: 20px;
+    }
+    @media (min-width: $desktop) {
+      width: 126px;
+      height: 64px;
+      margin-bottom: 20px;
+      max-width: 126px;
+    }
+    @media (min-width: $desktop-l) {
+      width: 160px;
+      height: 82px;
+      margin-bottom: 25px;
+      max-width: 160px;
+    }
+  }
+
+  &__img {
+    @media (min-width: $tablet) {
+      max-width: 86px;
+    }
+  }
+}
