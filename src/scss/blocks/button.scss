@@ -1,9 +1,9 @@
 .button {
-  @import "../main/variables";
-  @import "../main/variables.fonts";
-  @import "../main/variables.colors";
+  @import '../main/variables';
+  @import '../main/variables.fonts';
+  @import '../main/variables.colors';
 
-  font-family: "Mail_Sans_Roman", sans-serif;
+  font-family: 'Mail_Sans_Roman', sans-serif;
   color: $color-white;
   font-size: $font-size-15;
   font-weight: 500;

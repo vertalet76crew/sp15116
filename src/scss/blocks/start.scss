@@ -1,30 +1,25 @@
 .start {
-  @import "../main/variables";
-  @import "../main/variables.fonts";
-  @import "../main/variables.colors";
+  @import '../main/variables';
+  @import '../main/variables.fonts';
+  @import '../main/variables.colors';
 
   color: $color-light;
   background: $color-dark;
-  padding-top: 114px;
-  padding-bottom: 70px;
-
-  @media (min-width: $mobile-s) {
-    padding-top: 160px;
-    padding-bottom: 160px;
-  }
+  padding-top: 104px;
+  padding-bottom: 160px;
 
   @media (min-width: $tablet) {
-    padding-top: 180px;
+    padding-top: 121px;
     padding-bottom: 180px;
   }
 
   @media (min-width: $desktop) {
-    padding-top: 123px;
+    padding-top: 64px;
     padding-bottom: 120px;
   }
 
   @media (min-width: $desktop-l) {
-    padding-top: 164px;
+    padding-top: 75px;
     padding-bottom: 136px;
   }
 

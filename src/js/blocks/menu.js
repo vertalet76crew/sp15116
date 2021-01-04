@@ -1,44 +1,37 @@
 import $ from 'jquery';
+import 'jquery-ui-bundle';
+// import "jquery-ui-bundle/jquery-ui.css";
+function menu() {
+    const $dropdown = $('[data-target="dropdown"]');
+    const $products = $('[data-target="products-panel"]');
+    const $solutions = $('[data-target="solutions-panel"]');
+    const $resources = $('[data-target="resources-panel"]');
 
-function menu(isMobile) {
-    const $menu = $('[data-block="menu"]');
-    const $body = $('body');
-    const $html = $('html');
-
-    $menu.on('click', '[data-target="toggle"]', function(e) {
-        $menu.toggleClass('menu_open');
-
-        if (isMobile) {
-            $html.toggleClass('overflow-hidden');
-        } else {
-            $body.toggleClass('overflow-hidden');
+    $('body').on('click', function(e) {
+        if (!$(e.target).closest('[data-target="dropdown"]').length) {
+            if ($(e.target).closest('[data-target="products"]').length) {
+                $dropdown.addClass('show');
+                $products.removeClass('hide');
+                $solutions.addClass('hide');
+                $resources.addClass('hide');
+            } else if ($(e.target).closest('[data-target="solutions"]').length) {
+                $dropdown.addClass('show');
+                $solutions.removeClass('hide');
+                $resources.addClass('hide');
+                $products.addClass('hide');
+            } else if ($(e.target).closest('[data-target="resources"]').length) {
+                $dropdown.addClass('show');
+                $resources.removeClass('hide');
+                $solutions.addClass('hide');
+                $products.addClass('hide');
+            } else {
+                $dropdown.removeClass('show');
+                $resources.addClass('hide');
+                $solutions.addClass('hide');
+                $products.addClass('hide');
+            }
         }
-
-        e.preventDefault();
     });
-
-    $menu.on('click', '[data-target="child"]', function(e) {
-        const $item = $(this).parent();
-
-        if (isMobile || window.matchMedia('(max-width: 1019px)').matches) {
-            $item.toggleClass('menu__item_open')
-                .siblings()
-                .removeClass('menu__item_open');
-        }
-
-        e.preventDefault();
-    });
-
-    function closeMenu() {
-        $menu.removeClass('menu_open');
-        $menu.find('.menu__item_open').removeClass('menu__item_open');
-    }
-
-    if (isMobile) {
-        window.addEventListener('orientationchange', closeMenu, false);
-    } else {
-        $(window).resize(closeMenu);
-    }
 }
 
 export default menu;

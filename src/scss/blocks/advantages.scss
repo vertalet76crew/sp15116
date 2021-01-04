@@ -1,7 +1,7 @@
 .advantages {
-  @import "../main/variables";
-  @import "../main/variables.fonts";
-  @import "../main/variables.colors";
+  @import '../main/variables';
+  @import '../main/variables.fonts';
+  @import '../main/variables.colors';
 
   margin: 0 auto;
   padding: 37px 0 30px;
@@ -76,7 +76,7 @@
     }
 
     &-title {
-      font-family: "Mail_Sans_Roman", sans-serif;
+      font-family: 'Mail_Sans_Roman', sans-serif;
       margin-top: 0;
       color: $color-black;
       font-weight: 500;
@@ -93,7 +93,7 @@
     }
 
     &-text {
-      font-family: "Mail_Sans_Roman", sans-serif;
+      font-family: 'Mail_Sans_Roman', sans-serif;
       color: $color-black;
       font-weight: 400;
       text-align: center;
@@ -112,7 +112,7 @@
   }
 
   &__title {
-    font-family: "Mail_Sans_Roman", sans-serif;
+    font-family: 'Mail_Sans_Roman', sans-serif;
     color: $color-black;
     font-size: $font-size-26;
     line-height: $line-height-32;
@@ -165,7 +165,7 @@
   &__steps {
     display: flex;
     justify-content: space-between;
-    font-family: "Mail_Sans_Roman", sans-serif;
+    font-family: 'Mail_Sans_Roman', sans-serif;
     color: $color-black;
     flex-wrap: wrap;
     max-width: 336px;
@@ -257,7 +257,7 @@
 
     &-title {
       margin: 0;
-      font-family: "Mail_Sans_Roman", sans-serif;
+      font-family: 'Mail_Sans_Roman', sans-serif;
       font-size: $font-size-26;
       line-height: $line-height-32;
       font-weight: 500;

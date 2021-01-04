@@ -1,7 +1,7 @@
 .training {
-  @import "../main/variables";
-  @import "../main/variables.fonts";
-  @import "../main/variables.colors";
+  @import '../main/variables';
+  @import '../main/variables.fonts';
+  @import '../main/variables.colors';
   background: $color-gray;
 
   &__wrap {
@@ -85,7 +85,7 @@
       }
 
       &::before {
-        content: "30 мин";
+        content: '30 мин';
         position: absolute;
         left: 20px;
         top: 20px;
@@ -236,7 +236,7 @@
     justify-content: space-between;
     font-size: $font-size-15;
     line-height: $line-height-20;
-    font-family: "Mail_Sans_Roman", sans-serif;
+    font-family: 'Mail_Sans_Roman', sans-serif;
     flex-direction: column;
     @media (min-width: $tablet) {
       flex-direction: row;
@@ -246,6 +246,7 @@
       max-width: 192px;
     }
   }
+
   &__devider {
     display: none;
     @media (min-width: $tablet) {

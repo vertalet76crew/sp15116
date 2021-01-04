@@ -1,7 +1,7 @@
 .help {
-  @import "../main/variables";
-  @import "../main/variables.fonts";
-  @import "../main/variables.colors";
+  @import '../main/variables';
+  @import '../main/variables.fonts';
+  @import '../main/variables.colors';
   background-color: $color-gray;
 
   &__wrap {
@@ -67,7 +67,7 @@
 
   &__title {
     margin: 0;
-    font-family: "Mail_Sans_Roman", sans-serif;
+    font-family: 'Mail_Sans_Roman', sans-serif;
     font-weight: 500;
     font-size: $font-size-26;
     line-height: $line-height-32;
@@ -90,7 +90,7 @@
   &__tag {
     font-weight: 500;
     border-radius: 28px;
-    font-family: "Mail_Sans_Roman", sans-serif;
+    font-family: 'Mail_Sans_Roman', sans-serif;
     padding: 8px 26px;
     margin: 0 13px 8px 0;
     box-sizing: border-box;
@@ -129,6 +129,7 @@
     @media (min-width: $tablet) {
       display: flex;
     }
+
     &_mobile {
       display: flex;
       @media (min-width: $tablet) {

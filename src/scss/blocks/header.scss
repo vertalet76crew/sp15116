@@ -1,25 +1,30 @@
 .header {
   @import '../main/variables';
   @import '../main/variables.colors';
+  @import '../main/variables.fonts';
 
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding-top: 25px;
-  z-index: 100;
-
+  ul li {
+    list-style: none;
+  }
+  position: relative;
+  background-color: $color-dark;
   @media (min-width: $desktop-l) {
     padding-top: 34px;
   }
 
-  &__wrap {
+  &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     @media (min-width: $desktop) {
       align-items: center;
+    }
+    @media (min-width: $desktop-l) {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 120px;
+      box-sizing: border-box;
     }
   }
 
@@ -30,7 +35,7 @@
     height: 31px;
     z-index: 101;
     max-width: 198px;
-    background: url($img + '/logo.svg') no-repeat left;
+    background: url($img + "/logo.svg") no-repeat left;
     background-size: contain;
 
     @media (min-width: $mobile-s) {
@@ -42,5 +47,169 @@
       height: 55px;
       background-size: 100%;
     }
+  }
+
+  &__menu {
+    display: flex;
+    @media (min-width: $desktop-l) {
+    }
+  }
+
+  &__item {
+    font-weight: 500;
+    color: $color-white;
+    font-size: $font-size-15;
+    line-height: $line-height-20;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background ease 0.3s;
+    text-decoration: none;
+    @media (min-width: $desktop-l) {
+      margin-right: 24px;
+    }
+
+    &:hover {
+      background-color: $color-menu-hover;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &-name {
+      display: block;
+      margin-right: 9px;
+    }
+  }
+
+  &__login {
+    font-weight: 500;
+    color: $color-indigo;
+    font-size: $font-size-15;
+    line-height: $line-height-20;
+  }
+
+  &__dropdown {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: -150%;
+    padding: 30px 0;
+    box-shadow: 0 52px 81px rgba(0, 16, 61, 0.48);
+    z-index: 5;
+    background-color: $color-dark;
+    transition: top ease 0.1s;
+
+    &.show {
+      top: 100%;
+    }
+
+    &-wrap {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 120px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-info {
+      padding-left: 32px;
+      border-left: 1px solid rgba(255, 255, 255, 0.4);
+      margin: 0;
+      align-self: flex-start;
+
+      &-item {
+        font-weight: 500;
+        color: $color-white;
+        font-size: $font-size-15;
+        line-height: $line-height-20;
+        margin-bottom: 32px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      &-link {
+        color: $color-white;
+        text-decoration: none;
+      }
+    }
+
+    &-container {
+      display: flex;
+    }
+
+    &-panel {
+      &-item {
+        display: flex;
+        margin-bottom: 40px;
+        padding: 8px 0;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      &-img {
+        display: block;
+        width: 36px;
+        height: 36px;
+        margin-right: 8px;
+      }
+    }
+
+    &-tab {
+      &-title {
+        color: $color-white;
+        font-size: $font-size-15;
+        line-height: $line-height-20;
+        display: block;
+        font-weight: 500;
+      }
+
+      &-subtitle {
+        color: $color-indigo;
+        font-size: $font-size-15;
+        line-height: $line-height-20;
+        display: block;
+        font-weight: 400;
+      }
+    }
+  }
+
+  &__tabs {
+    max-width: 280px;
+    margin: 0 58px 0 0;
+    padding: 0;
+
+    &-item {
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: background ease 0.3s;
+      cursor: pointer;
+      margin-bottom: 32px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &.ui-state-active {
+        background-color: $color-menu-hover;
+      }
+    }
+
+    &-link {
+      text-decoration: none;
+      outline: none;
+    }
+  }
+
+  .hide {
+    display: none;
   }
 }

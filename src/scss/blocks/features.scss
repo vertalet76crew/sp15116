@@ -1,7 +1,7 @@
 .features {
-  @import "../main/variables";
-  @import "../main/variables.fonts";
-  @import "../main/variables.colors";
+  @import '../main/variables';
+  @import '../main/variables.fonts';
+  @import '../main/variables.colors';
 
   padding-top: 54px;
   padding-bottom: 11px;
@@ -207,7 +207,7 @@
   }
 
   &__text {
-    font-family: "Mail_Sans_Roman", sans-serif;
+    font-family: 'Mail_Sans_Roman', sans-serif;
     font-size: $font-size-15;
     line-height: $line-height-24;
     font-weight: 400;
