@@ -4,7 +4,8 @@
       <a class="header__logo"></a>
       <ul class="header__menu">
         <li class="header__item header__item_products" data-target="products">
-          <span class="header__item-name">Продукты</span>
+         <div class="header__row">
+            <span class="header__item-name">Продукты</span>
           <svg
             class="header__arrow"
             width="16"
@@ -19,9 +20,256 @@
               d="M5.171 7.226C5.064 7.097 5 6.931 5 6.75C5 6.336 5.336 6 5.75 6H10.25C10.664 6 11 6.336 11 6.75C11 6.931 10.936 7.097 10.829 7.226L8.606 10.192C8.47 10.378 8.249 10.5 8 10.5C7.751 10.5 7.53 10.378 7.394 10.192L5.171 7.226Z"
             ></path>
           </svg>
+         </div>
+          <div class="header__dropdown" data-target="dropdown">
+            <div class="header__dropdown-wrap">
+              <div
+                id="tabs"
+                class="header__dropdown-container hide"
+                data-target="products-panel"
+              >
+                <ul class="header__tabs">
+                  <li class="header__tabs-item">
+                    <a href="#tabs-1" class="header__tabs-link">
+                      <span class="header__dropdown-tab-title"
+                        >Коммуникационные сервисы</span
+                      >
+                      <span class="header__dropdown-tab-subtitle"
+                        >Написать, позвонить, послать файл</span
+                      >
+                    </a>
+                  </li>
+                  <li class="header__tabs-item">
+                    <a href="#tabs-2" class="header__tabs-link">
+                      <span class="header__dropdown-tab-title"
+                        >Сервисы для развития бизнеса</span
+                      >
+                      <span class="header__dropdown-tab-subtitle"
+                        >Создать сайт, опрос, рассылку</span
+                      ></a
+                    >
+                  </li>
+                  <li class="header__tabs-item">
+                    <a href="#tabs-3" class="header__tabs-link">
+                      <span class="header__dropdown-tab-title"
+                        >Vision технологии
+                      </span>
+                      <span class="header__dropdown-tab-subtitle"
+                        >Распознать объекты и документы</span
+                      ></a
+                    >
+                  </li>
+                  <li class="header__tabs-item">
+                    <a href="#tabs-4" class="header__tabs-link">
+                      <span class="header__dropdown-tab-title">
+                        Корпоративные продукты
+                      </span>
+                      <span class="header__dropdown-tab-subtitle">
+                        Почта, мессенджер, хранилище
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+                <div id="tabs-1" class="header__dropdown-panel">
+                  <div class="header__dropdown-panel-container">
+                    <div class="header__dropdown-panel-item">
+                      <img
+                        src="{{ static('panel_1.svg')}}"
+                        class="header__dropdown-panel-img"
+                      />
+                      <div class="header__dropdown-panel-text">
+                        <span class="header__dropdown-tab-title">
+                          Почта для домена
+                        </span>
+                        <span class="header__dropdown-tab-subtitle">
+                          Почта для вашего домена
+                        </span>
+                      </div>
+                    </div>
+                    <div class="header__dropdown-panel-item">
+                      <img
+                        src="{{ static('panel_2.svg')}}"
+                        class="header__dropdown-panel-img"
+                      />
+                      <div class="header__dropdown-panel-text">
+                        <span class="header__dropdown-tab-title">
+                          Teambox
+                        </span>
+                        <span class="header__dropdown-tab-subtitle">
+                          Файловое хранилище
+                        </span>
+                      </div>
+                    </div>
+                    <div class="header__dropdown-panel-item">
+                      <img
+                        src="{{ static('panel_3.svg')}}"
+                        class="header__dropdown-panel-img"
+                      />
+                      <div class="header__dropdown-panel-text">
+                        <span class="header__dropdown-tab-title"> Myteam </span>
+                        <span class="header__dropdown-tab-subtitle">
+                          Мессенджер для компании
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="tabs-2" class="header__dropdown-panel">
+                  <div class="header__dropdown-panel-container">
+                    <div class="header__dropdown-panel-item">
+                      <img
+                        src="{{ static('panel_4.svg')}}"
+                        class="header__dropdown-panel-img"
+                      />
+                      <div class="header__dropdown-panel-text">
+                        <span class="header__dropdown-tab-title">
+                          Sendbox
+                        </span>
+                        <span class="header__dropdown-tab-subtitle">
+                          Сервис рассылок
+                        </span>
+                      </div>
+                    </div>
+                    <div class="header__dropdown-panel-item">
+                      <img
+                        src="{{ static('panel_5.svg')}}"
+                        class="header__dropdown-panel-img"
+                      />
+                      <div class="header__dropdown-panel-text">
+                        <span class="header__dropdown-tab-title">
+                          Sitebox
+                        </span>
+                        <span class="header__dropdown-tab-subtitle">
+                          Конструктор сайтов
+                        </span>
+                      </div>
+                    </div>
+                    <div class="header__dropdown-panel-item">
+                      <img
+                        src="{{ static('panel_6.svg')}}"
+                        class="header__dropdown-panel-img"
+                      />
+                      <div class="header__dropdown-panel-text">
+                        <span class="header__dropdown-tab-title"> Askbox </span>
+                        <span class="header__dropdown-tab-subtitle">
+                          Сервис опросов
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="tabs-3" class="header__dropdown-panel">
+                  <div class="header__dropdown-panel-container">
+                    <div class="header__dropdown-panel-item">
+                      <img
+                        src="{{ static('panel_7.svg')}}"
+                        class="header__dropdown-panel-img"
+                      />
+                      <div class="header__dropdown-panel-text">
+                        <span class="header__dropdown-tab-title"> Vision </span>
+                        <span class="header__dropdown-tab-subtitle">
+                          Компьютерное зрение
+                        </span>
+                      </div>
+                    </div>
+                    <div class="header__dropdown-panel-item">
+                      <img
+                        src="{{ static('panel_8.svg')}}"
+                        class="header__dropdown-panel-img"
+                      />
+                      <div class="header__dropdown-panel-text">
+                        <span class="header__dropdown-tab-title">
+                          Vision для мероприятий
+                        </span>
+                        <span class="header__dropdown-tab-subtitle">
+                          Поиск людей по фотографиям
+                        </span>
+                      </div>
+                    </div>
+                    <div class="header__dropdown-panel-item">
+                      <img
+                        src="{{ static('panel_9.svg')}}"
+                        class="header__dropdown-panel-img"
+                      />
+                      <div class="header__dropdown-panel-text">
+                        <span class="header__dropdown-tab-title">
+                          Vision Document
+                        </span>
+                        <span class="header__dropdown-tab-subtitle">
+                          Распознавание документов
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="tabs-4" class="header__dropdown-panel">
+                  <div class="header__dropdown-panel-container">
+                    <div class="header__dropdown-panel-item">
+                      <img
+                        src="{{ static('panel_10.svg')}}"
+                        class="header__dropdown-panel-img"
+                      />
+                      <div class="header__dropdown-panel-text">
+                        <span class="header__dropdown-tab-title">
+                          Корпоративная Почта
+                        </span>
+                        <span class="header__dropdown-tab-subtitle">
+                          Почта, календарь и контакты
+                        </span>
+                      </div>
+                    </div>
+                    <div class="header__dropdown-panel-item">
+                      <img
+                        src="{{ static('panel_11.svg')}}"
+                        class="header__dropdown-panel-img"
+                      />
+                      <div class="header__dropdown-panel-text">
+                        <span class="header__dropdown-tab-title">
+                          Корпоративное Хранилище
+                        </span>
+                        <span class="header__dropdown-tab-subtitle">
+                          Работа с документами онлайн
+                        </span>
+                      </div>
+                    </div>
+                    <div class="header__dropdown-panel-item">
+                      <img
+                        src="{{ static('panel_12.svg')}}"
+                        class="header__dropdown-panel-img"
+                      />
+                      <div class="header__dropdown-panel-text">
+                        <span class="header__dropdown-tab-title">
+                          Корпоративный Мессенджер
+                        </span>
+                        <span class="header__dropdown-tab-subtitle">
+                          Сообщения, звонки, чат-боты
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <ul class="header__dropdown-info" data-target="dropdown-info">
+                <li class="header__dropdown-info-item">
+                  <a href="" class="header__dropdown-info-link">Безопасность</a>
+                </li>
+                <li class="header__dropdown-info-item">
+                  <a href="" class="header__dropdown-info-link">Партнерам</a>
+                </li>
+                <li class="header__dropdown-info-item">
+                  <a href="" class="header__dropdown-info-link">Мероприятия</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </li>
         <li class="header__item header__item_solutions" data-target="solutions">
-          <span class="header__item-name">Решения</span
+         <div class="header__row">
+            <span class="header__item-name">Решения</span
           ><svg
             class="header__arrow"
             width="16"
@@ -36,9 +284,49 @@
               d="M5.171 7.226C5.064 7.097 5 6.931 5 6.75C5 6.336 5.336 6 5.75 6H10.25C10.664 6 11 6.336 11 6.75C11 6.931 10.936 7.097 10.829 7.226L8.606 10.192C8.47 10.378 8.249 10.5 8 10.5C7.751 10.5 7.53 10.378 7.394 10.192L5.171 7.226Z"
             ></path>
           </svg>
+         </div>
+          <div class="header__dropdown" data-target="dropdown">
+            <div class="header__dropdown-wrap">
+          
+
+              <div
+                class="header__dropdown-container hide"
+                data-target="resources-panel"
+              >
+                <ul class="header__dropdown-block">
+                  <li class="header__dropdown-info-item">
+                    <a href="" class="header__dropdown-info-link"
+                      >Крупный бизнес</a
+                    >
+                  </li>
+                  <li class="header__dropdown-info-item">
+                    <a href="" class="header__dropdown-info-link">Госсектор</a>
+                  </li>
+                  <li class="header__dropdown-info-item">
+                    <a href="" class="header__dropdown-info-link">
+                      Cредний и малый бизнес
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <ul class="header__dropdown-info" data-target="dropdown-info">
+                <li class="header__dropdown-info-item">
+                  <a href="" class="header__dropdown-info-link">Безопасность</a>
+                </li>
+                <li class="header__dropdown-info-item">
+                  <a href="" class="header__dropdown-info-link">Партнерам</a>
+                </li>
+                <li class="header__dropdown-info-item">
+                  <a href="" class="header__dropdown-info-link">Мероприятия</a>
+                </li>
+              </ul>
+            
+          </div>
         </li>
         <li class="header__item header__item-resources" data-target="resources">
-          <span class="header__item-name">Ресурсы</span>
+         <div class="header__row">
+            <span class="header__item-name">Ресурсы</span>
           <svg
             class="header__arrow"
             width="16"
@@ -53,317 +341,85 @@
               d="M5.171 7.226C5.064 7.097 5 6.931 5 6.75C5 6.336 5.336 6 5.75 6H10.25C10.664 6 11 6.336 11 6.75C11 6.931 10.936 7.097 10.829 7.226L8.606 10.192C8.47 10.378 8.249 10.5 8 10.5C7.751 10.5 7.53 10.378 7.394 10.192L5.171 7.226Z"
             ></path>
           </svg>
+         </div>
+          <div class="header__dropdown" data-target="dropdown">
+            <div class="header__dropdown-wrap">
+
+              <div
+                class="header__dropdown-container hide"
+                data-target="solutions-panel"
+              >
+                <ul class="header__dropdown-block">
+                  <li class="header__dropdown-info-item">
+                    <a href="" class="header__dropdown-info-link"
+                      ><span class="header__dropdown-tab-title">
+                        Документация
+                      </span>
+                      <span class="header__dropdown-tab-subtitle">
+                        Почитать про сервисы
+                      </span></a
+                    >
+                  </li>
+                  <li class="header__dropdown-info-item">
+                    <a href="" class="header__dropdown-info-link"
+                      ><span class="header__dropdown-tab-title">
+                        Техподдержка
+                      </span>
+                      <span class="header__dropdown-tab-subtitle">
+                        Задайте вопрос специалисту
+                      </span>
+                    </a>
+                  </li>
+                  <li class="header__dropdown-info-item">
+                    <a href="" class="header__dropdown-info-link">
+                      <span class="header__dropdown-tab-title">
+                        Администрирование
+                      </span>
+                      <span class="header__dropdown-tab-subtitle">
+                        Управляйте продуктами
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+                <ul class="header__dropdown-block">
+                  <li class="header__dropdown-info-item">
+                    <a href="" class="header__dropdown-info-link"
+                      ><span class="header__dropdown-tab-title">
+                        Работа с AD
+                      </span>
+                      <span class="header__dropdown-tab-subtitle">
+                        Синхронизируйте данные
+                      </span></a
+                    >
+                  </li>
+                  <li class="header__dropdown-info-item">
+                    <a href="" class="header__dropdown-info-link"
+                      ><span class="header__dropdown-tab-title"> Блог </span>
+                      <span class="header__dropdown-tab-subtitle">
+                        Статьи о технологиях
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+
+              <ul class="header__dropdown-info" data-target="dropdown-info">
+                <li class="header__dropdown-info-item">
+                  <a href="" class="header__dropdown-info-link">Безопасность</a>
+                </li>
+                <li class="header__dropdown-info-item">
+                  <a href="" class="header__dropdown-info-link">Партнерам</a>
+                </li>
+                <li class="header__dropdown-info-item">
+                  <a href="" class="header__dropdown-info-link">Мероприятия</a>
+                </li>
+              </ul>
+            
+          </div>
         </li>
       </ul>
       <div class="header__login">Вход</div>
-    </div>
-  </div>
-  <div class="header__dropdown" data-target="dropdown">
-    <div class="header__dropdown-wrap">
-      <div
-        id="tabs"
-        class="header__dropdown-container hide"
-        data-target="products-panel"
-      >
-        <ul class="header__tabs">
-          <li class="header__tabs-item">
-            <a href="#tabs-1" class="header__tabs-link">
-              <span class="header__dropdown-tab-title"
-                >Коммуникационные сервисы</span
-              >
-              <span class="header__dropdown-tab-subtitle"
-                >Написать, позвонить, послать файл</span
-              >
-            </a>
-          </li>
-          <li class="header__tabs-item">
-            <a href="#tabs-2" class="header__tabs-link">
-              <span class="header__dropdown-tab-title"
-                >Сервисы для развития бизнеса</span
-              >
-              <span class="header__dropdown-tab-subtitle"
-                >Создать сайт, опрос, рассылку</span
-              ></a
-            >
-          </li>
-          <li class="header__tabs-item">
-            <a href="#tabs-3" class="header__tabs-link">
-              <span class="header__dropdown-tab-title">Vision технологии </span>
-              <span class="header__dropdown-tab-subtitle"
-                >Распознать объекты и документы</span
-              ></a
-            >
-          </li>
-          <li class="header__tabs-item">
-            <a href="#tabs-4" class="header__tabs-link">
-              <span class="header__dropdown-tab-title">
-                Корпоративные продукты
-              </span>
-              <span class="header__dropdown-tab-subtitle">
-                Почта, мессенджер, хранилище
-              </span>
-            </a>
-          </li>
-        </ul>
-        <div id="tabs-1" class="header__dropdown-panel">
-          <div class="header__dropdown-panel-container">
-            <div class="header__dropdown-panel-item">
-              <img
-                src="{{ static('panel_1.svg')}}"
-                class="header__dropdown-panel-img"
-              />
-              <div class="header__dropdown-panel-text">
-                <span class="header__dropdown-tab-title">
-                  Почта для домена
-                </span>
-                <span class="header__dropdown-tab-subtitle">
-                  Почта для вашего домена
-                </span>
-              </div>
-            </div>
-            <div class="header__dropdown-panel-item">
-              <img
-                src="{{ static('panel_2.svg')}}"
-                class="header__dropdown-panel-img"
-              />
-              <div class="header__dropdown-panel-text">
-                <span class="header__dropdown-tab-title"> Teambox </span>
-                <span class="header__dropdown-tab-subtitle">
-                  Файловое хранилище
-                </span>
-              </div>
-            </div>
-            <div class="header__dropdown-panel-item">
-              <img
-                src="{{ static('panel_3.svg')}}"
-                class="header__dropdown-panel-img"
-              />
-              <div class="header__dropdown-panel-text">
-                <span class="header__dropdown-tab-title"> Myteam </span>
-                <span class="header__dropdown-tab-subtitle">
-                  Мессенджер для компании
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="tabs-2" class="header__dropdown-panel">
-          <div class="header__dropdown-panel-container">
-            <div class="header__dropdown-panel-item">
-              <img
-                src="{{ static('panel_4.svg')}}"
-                class="header__dropdown-panel-img"
-              />
-              <div class="header__dropdown-panel-text">
-                <span class="header__dropdown-tab-title"> Sendbox </span>
-                <span class="header__dropdown-tab-subtitle">
-                  Сервис рассылок
-                </span>
-              </div>
-            </div>
-            <div class="header__dropdown-panel-item">
-              <img
-                src="{{ static('panel_5.svg')}}"
-                class="header__dropdown-panel-img"
-              />
-              <div class="header__dropdown-panel-text">
-                <span class="header__dropdown-tab-title"> Sitebox </span>
-                <span class="header__dropdown-tab-subtitle">
-                  Конструктор сайтов
-                </span>
-              </div>
-            </div>
-            <div class="header__dropdown-panel-item">
-              <img
-                src="{{ static('panel_6.svg')}}"
-                class="header__dropdown-panel-img"
-              />
-              <div class="header__dropdown-panel-text">
-                <span class="header__dropdown-tab-title"> Askbox </span>
-                <span class="header__dropdown-tab-subtitle">
-                  Сервис опросов
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="tabs-3" class="header__dropdown-panel">
-          <div class="header__dropdown-panel-container">
-            <div class="header__dropdown-panel-item">
-              <img
-                src="{{ static('panel_7.svg')}}"
-                class="header__dropdown-panel-img"
-              />
-              <div class="header__dropdown-panel-text">
-                <span class="header__dropdown-tab-title"> Vision </span>
-                <span class="header__dropdown-tab-subtitle">
-                  Компьютерное зрение
-                </span>
-              </div>
-            </div>
-            <div class="header__dropdown-panel-item">
-              <img
-                src="{{ static('panel_8.svg')}}"
-                class="header__dropdown-panel-img"
-              />
-              <div class="header__dropdown-panel-text">
-                <span class="header__dropdown-tab-title">
-                  Vision для мероприятий
-                </span>
-                <span class="header__dropdown-tab-subtitle">
-                  Поиск людей по фотографиям
-                </span>
-              </div>
-            </div>
-            <div class="header__dropdown-panel-item">
-              <img
-                src="{{ static('panel_9.svg')}}"
-                class="header__dropdown-panel-img"
-              />
-              <div class="header__dropdown-panel-text">
-                <span class="header__dropdown-tab-title">
-                  Vision Document
-                </span>
-                <span class="header__dropdown-tab-subtitle">
-                  Распознавание документов
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="tabs-4" class="header__dropdown-panel">
-          <div class="header__dropdown-panel-container">
-            <div class="header__dropdown-panel-item">
-              <img
-                src="{{ static('panel_10.svg')}}"
-                class="header__dropdown-panel-img"
-              />
-              <div class="header__dropdown-panel-text">
-                <span class="header__dropdown-tab-title">
-                  Корпоративная Почта
-                </span>
-                <span class="header__dropdown-tab-subtitle">
-                  Почта, календарь и контакты
-                </span>
-              </div>
-            </div>
-            <div class="header__dropdown-panel-item">
-              <img
-                src="{{ static('panel_11.svg')}}"
-                class="header__dropdown-panel-img"
-              />
-              <div class="header__dropdown-panel-text">
-                <span class="header__dropdown-tab-title">
-                  Корпоративное Хранилище
-                </span>
-                <span class="header__dropdown-tab-subtitle">
-                  Работа с документами онлайн
-                </span>
-              </div>
-            </div>
-            <div class="header__dropdown-panel-item">
-              <img
-                src="{{ static('panel_12.svg')}}"
-                class="header__dropdown-panel-img"
-              />
-              <div class="header__dropdown-panel-text">
-                <span class="header__dropdown-tab-title">
-                  Корпоративный Мессенджер
-                </span>
-                <span class="header__dropdown-tab-subtitle">
-                  Сообщения, звонки, чат-боты
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div
-        class="header__dropdown-container hide"
-        data-target="solutions-panel"
-      >
-        <ul class="header__dropdown-block">
-          <li class="header__dropdown-info-item">
-            <a href="" class="header__dropdown-info-link"
-              ><span class="header__dropdown-tab-title"> Документация </span>
-              <span class="header__dropdown-tab-subtitle">
-                Почитать про сервисы
-              </span></a
-            >
-          </li>
-          <li class="header__dropdown-info-item">
-            <a href="" class="header__dropdown-info-link"
-              ><span class="header__dropdown-tab-title"> Техподдержка </span>
-              <span class="header__dropdown-tab-subtitle">
-                Задайте вопрос специалисту
-              </span>
-            </a>
-          </li>
-          <li class="header__dropdown-info-item">
-            <a href="" class="header__dropdown-info-link">
-              <span class="header__dropdown-tab-title">
-                Администрирование
-              </span>
-              <span class="header__dropdown-tab-subtitle">
-                Управляйте продуктами
-              </span>
-            </a>
-          </li>
-        </ul>
-        <ul class="header__dropdown-block">
-          <li class="header__dropdown-info-item">
-            <a href="" class="header__dropdown-info-link"
-              ><span class="header__dropdown-tab-title"> Работа с AD </span>
-              <span class="header__dropdown-tab-subtitle">
-                Синхронизируйте данные
-              </span></a
-            >
-          </li>
-          <li class="header__dropdown-info-item">
-            <a href="" class="header__dropdown-info-link"
-              ><span class="header__dropdown-tab-title"> Блог </span>
-              <span class="header__dropdown-tab-subtitle">
-                Статьи о технологиях
-              </span>
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <div
-        class="header__dropdown-container hide"
-        data-target="resources-panel"
-      >
-        <ul class="header__dropdown-block">
-          <li class="header__dropdown-info-item">
-            <a href="" class="header__dropdown-info-link">Крупный бизнес</a>
-          </li>
-          <li class="header__dropdown-info-item">
-            <a href="" class="header__dropdown-info-link">Госсектор</a>
-          </li>
-          <li class="header__dropdown-info-item">
-            <a href="" class="header__dropdown-info-link">
-              Cредний и малый бизнес
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <ul class="header__dropdown-info" data-target="dropdown-info">
-        <li class="header__dropdown-info-item">
-          <a href="" class="header__dropdown-info-link">Безопасность</a>
-        </li>
-        <li class="header__dropdown-info-item">
-          <a href="" class="header__dropdown-info-link">Партнерам</a>
-        </li>
-        <li class="header__dropdown-info-item">
-          <a href="" class="header__dropdown-info-link">Мероприятия</a>
-        </li>
-      </ul>
     </div>
   </div>
 </header>
