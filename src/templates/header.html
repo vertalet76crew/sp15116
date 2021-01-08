@@ -1,8 +1,11 @@
 <header class="header">
   <div class="header__wrap">
     <div class="header__container">
-      <a class="header__logo"></a>
-      <ul class="header__menu">
+      <div class="header__box">
+        <i class="header__button header__button_open" data-target="open"></i>
+        <a href="#" class="header__logo"></a>
+      </div>
+      <ul class="header__menu hide" data-target="menu">
         <li class="header__item header__item_products" data-target="products">
          <div class="header__row">
             <span class="header__item-name">Продукты</span>
@@ -25,46 +28,46 @@
             <div class="header__dropdown-wrap">
               <div
                 id="tabs"
-                class="header__dropdown-container hide"
+                class="header__dropdown-container"
                 data-target="products-panel"
               >
                 <ul class="header__tabs">
                   <li class="header__tabs-item">
                     <a href="#tabs-1" class="header__tabs-link">
-                      <span class="header__dropdown-tab-title"
+                      <span class="header__dropdown-tab-title header__dropdown-tab-title_mobile"
                         >Коммуникационные сервисы</span
                       >
-                      <span class="header__dropdown-tab-subtitle"
+                      <span class="header__dropdown-tab-subtitle header__dropdown-tab-subtitle_mobile"
                         >Написать, позвонить, послать файл</span
                       >
                     </a>
                   </li>
                   <li class="header__tabs-item">
                     <a href="#tabs-2" class="header__tabs-link">
-                      <span class="header__dropdown-tab-title"
+                      <span class="header__dropdown-tab-title header__dropdown-tab-title_mobile"
                         >Сервисы для развития бизнеса</span
                       >
-                      <span class="header__dropdown-tab-subtitle"
+                      <span class="header__dropdown-tab-subtitle header__dropdown-tab-subtitle_mobile"
                         >Создать сайт, опрос, рассылку</span
                       ></a
                     >
                   </li>
                   <li class="header__tabs-item">
                     <a href="#tabs-3" class="header__tabs-link">
-                      <span class="header__dropdown-tab-title"
+                      <span class="header__dropdown-tab-title header__dropdown-tab-title_mobile"
                         >Vision технологии
                       </span>
-                      <span class="header__dropdown-tab-subtitle"
+                      <span class="header__dropdown-tab-subtitle header__dropdown-tab-subtitle_mobile"
                         >Распознать объекты и документы</span
                       ></a
                     >
                   </li>
                   <li class="header__tabs-item">
                     <a href="#tabs-4" class="header__tabs-link">
-                      <span class="header__dropdown-tab-title">
+                      <span class="header__dropdown-tab-title header__dropdown-tab-title_mobile">
                         Корпоративные продукты
                       </span>
-                      <span class="header__dropdown-tab-subtitle">
+                      <span class="header__dropdown-tab-subtitle header__dropdown-tab-subtitle_mobile">
                         Почта, мессенджер, хранилище
                       </span>
                     </a>
@@ -72,7 +75,7 @@
                 </ul>
                 <div id="tabs-1" class="header__dropdown-panel">
                   <div class="header__dropdown-panel-container">
-                    <div class="header__dropdown-panel-item">
+                    <a class="header__dropdown-panel-item" href="https://biz.mail.ru/mail/ " target="_blank">
                       <img
                         src="{{ static('panel_1.svg')}}"
                         class="header__dropdown-panel-img"
@@ -81,12 +84,12 @@
                         <span class="header__dropdown-tab-title">
                           Почта для домена
                         </span>
-                        <span class="header__dropdown-tab-subtitle">
+                        <span class="header__dropdown-tab-subtitle header__dropdown-tab-subtitle_mobile">
                           Почта для вашего домена
                         </span>
                       </div>
-                    </div>
-                    <div class="header__dropdown-panel-item">
+                    </a>
+                    <a href="https://biz.mail.ru/teambox/" target="_blank" class="header__dropdown-panel-item">
                       <img
                         src="{{ static('panel_2.svg')}}"
                         class="header__dropdown-panel-img"
@@ -99,8 +102,8 @@
                           Файловое хранилище
                         </span>
                       </div>
-                    </div>
-                    <div class="header__dropdown-panel-item">
+                    </a>
+                    <a href="https://biz.mail.ru/myteam/" target="_blank" class="header__dropdown-panel-item">
                       <img
                         src="{{ static('panel_3.svg')}}"
                         class="header__dropdown-panel-img"
@@ -111,13 +114,13 @@
                           Мессенджер для компании
                         </span>
                       </div>
-                    </div>
+                    </a>
                   </div>
                 </div>
 
                 <div id="tabs-2" class="header__dropdown-panel">
                   <div class="header__dropdown-panel-container">
-                    <div class="header__dropdown-panel-item">
+                    <a href="https://biz.mail.ru/sendbox/" target="_blank" class="header__dropdown-panel-item">
                       <img
                         src="{{ static('panel_4.svg')}}"
                         class="header__dropdown-panel-img"
@@ -130,8 +133,8 @@
                           Сервис рассылок
                         </span>
                       </div>
-                    </div>
-                    <div class="header__dropdown-panel-item">
+                    </a>
+                    <a href="https://biz.mail.ru/sitebox/ " target="_blank" class="header__dropdown-panel-item">
                       <img
                         src="{{ static('panel_5.svg')}}"
                         class="header__dropdown-panel-img"
@@ -144,8 +147,8 @@
                           Конструктор сайтов
                         </span>
                       </div>
-                    </div>
-                    <div class="header__dropdown-panel-item">
+                    </a>
+                    <a href="https://biz.mail.ru/askbox/" target="_blank" class="header__dropdown-panel-item">
                       <img
                         src="{{ static('panel_6.svg')}}"
                         class="header__dropdown-panel-img"
@@ -156,13 +159,13 @@
                           Сервис опросов
                         </span>
                       </div>
-                    </div>
+                    </a>
                   </div>
                 </div>
 
                 <div id="tabs-3" class="header__dropdown-panel">
                   <div class="header__dropdown-panel-container">
-                    <div class="header__dropdown-panel-item">
+                    <a href="https://mcs.mail.ru/vision/" target="_blank" class="header__dropdown-panel-item">
                       <img
                         src="{{ static('panel_7.svg')}}"
                         class="header__dropdown-panel-img"
@@ -173,8 +176,8 @@
                           Компьютерное зрение
                         </span>
                       </div>
-                    </div>
-                    <div class="header__dropdown-panel-item">
+                    </a>
+                    <a href="https://biz.mail.ru/events/" target="_blank" class="header__dropdown-panel-item">
                       <img
                         src="{{ static('panel_8.svg')}}"
                         class="header__dropdown-panel-img"
@@ -187,8 +190,8 @@
                           Поиск людей по фотографиям
                         </span>
                       </div>
-                    </div>
-                    <div class="header__dropdown-panel-item">
+                    </a>
+                    <a href="https://biz.mail.ru/visiondoc/" target="_blank" class="header__dropdown-panel-item">
                       <img
                         src="{{ static('panel_9.svg')}}"
                         class="header__dropdown-panel-img"
@@ -201,13 +204,13 @@
                           Распознавание документов
                         </span>
                       </div>
-                    </div>
+                    </a>
                   </div>
                 </div>
 
                 <div id="tabs-4" class="header__dropdown-panel">
                   <div class="header__dropdown-panel-container">
-                    <div class="header__dropdown-panel-item">
+                    <a href="https://biz.mail.ru/onpremise/mail " target="_blank" class="header__dropdown-panel-item">
                       <img
                         src="{{ static('panel_10.svg')}}"
                         class="header__dropdown-panel-img"
@@ -220,8 +223,8 @@
                           Почта, календарь и контакты
                         </span>
                       </div>
-                    </div>
-                    <div class="header__dropdown-panel-item">
+                    </a>
+                    <a href="https://biz.mail.ru/onpremise/file_storage " target="_blank" class="header__dropdown-panel-item">
                       <img
                         src="{{ static('panel_11.svg')}}"
                         class="header__dropdown-panel-img"
@@ -234,8 +237,8 @@
                           Работа с документами онлайн
                         </span>
                       </div>
-                    </div>
-                    <div class="header__dropdown-panel-item">
+                    </a>
+                    <a href="https://biz.mail.ru/onpremise/messenger" target="_blank" class="header__dropdown-panel-item">
                       <img
                         src="{{ static('panel_12.svg')}}"
                         class="header__dropdown-panel-img"
@@ -248,25 +251,26 @@
                           Сообщения, звонки, чат-боты
                         </span>
                       </div>
-                    </div>
+                    </a>
                   </div>
                 </div>
               </div>
 
               <ul class="header__dropdown-info" data-target="dropdown-info">
                 <li class="header__dropdown-info-item">
-                  <a href="" class="header__dropdown-info-link">Безопасность</a>
+                  <a href="https://biz.mail.ru/onpremise/security" target="_blank" class="header__dropdown-info-link">Безопасность</a>
                 </li>
                 <li class="header__dropdown-info-item">
-                  <a href="" class="header__dropdown-info-link">Партнерам</a>
+                  <a href="https://mail.ru/onpremise/partner" target="_blank" class="header__dropdown-info-link">Партнерам</a>
                 </li>
                 <li class="header__dropdown-info-item">
-                  <a href="" class="header__dropdown-info-link">Мероприятия</a>
+                  <a href="https://biz.mail.ru/events" target="_blank" class="header__dropdown-info-link">Мероприятия</a>
                 </li>
               </ul>
             </div>
           </div>
         </li>
+      
         <li class="header__item header__item_solutions" data-target="solutions">
          <div class="header__row">
             <span class="header__item-name">Решения</span
@@ -290,20 +294,20 @@
           
 
               <div
-                class="header__dropdown-container hide"
+                class="header__dropdown-container"
                 data-target="resources-panel"
               >
                 <ul class="header__dropdown-block">
                   <li class="header__dropdown-info-item">
-                    <a href="" class="header__dropdown-info-link"
+                    <a href="https://biz.mail.ru/onpremise/enterprise  " target="_blank"  class="header__dropdown-info-link"
                       >Крупный бизнес</a
                     >
                   </li>
                   <li class="header__dropdown-info-item">
-                    <a href="" class="header__dropdown-info-link">Госсектор</a>
+                    <a href="https://biz.mail.ru/onpremise/government" target="_blank"  class="header__dropdown-info-link">Госсектор</a>
                   </li>
                   <li class="header__dropdown-info-item">
-                    <a href="" class="header__dropdown-info-link">
+                    <a href="https://biz.mail.ru/onpremise/small-business" target="_blank"  class="header__dropdown-info-link">
                       Cредний и малый бизнес
                     </a>
                   </li>
@@ -312,13 +316,13 @@
 
               <ul class="header__dropdown-info" data-target="dropdown-info">
                 <li class="header__dropdown-info-item">
-                  <a href="" class="header__dropdown-info-link">Безопасность</a>
+                  <a href="https://biz.mail.ru/onpremise/security" target="_blank" class="header__dropdown-info-link">Безопасность</a>
                 </li>
                 <li class="header__dropdown-info-item">
-                  <a href="" class="header__dropdown-info-link">Партнерам</a>
+                  <a href="https://mail.ru/onpremise/partner" target="_blank" class="header__dropdown-info-link">Партнерам</a>
                 </li>
                 <li class="header__dropdown-info-item">
-                  <a href="" class="header__dropdown-info-link">Мероприятия</a>
+                  <a href="https://biz.mail.ru/events" target="_blank" class="header__dropdown-info-link">Мероприятия</a>
                 </li>
               </ul>
             
@@ -346,12 +350,12 @@
             <div class="header__dropdown-wrap">
 
               <div
-                class="header__dropdown-container hide"
+                class="header__dropdown-container"
                 data-target="solutions-panel"
               >
                 <ul class="header__dropdown-block">
                   <li class="header__dropdown-info-item">
-                    <a href="" class="header__dropdown-info-link"
+                    <a href="https://biz.mail.ru/onpremise/documents" class="header__dropdown-info-link"
                       ><span class="header__dropdown-tab-title">
                         Документация
                       </span>
@@ -361,7 +365,7 @@
                     >
                   </li>
                   <li class="header__dropdown-info-item">
-                    <a href="" class="header__dropdown-info-link"
+                    <a href="https://biz.mail.ru/onpremise/support " class="header__dropdown-info-link"
                       ><span class="header__dropdown-tab-title">
                         Техподдержка
                       </span>
@@ -371,7 +375,7 @@
                     </a>
                   </li>
                   <li class="header__dropdown-info-item">
-                    <a href="" class="header__dropdown-info-link">
+                    <a href="https://biz.mail.ru/onpremise/administration" class="header__dropdown-info-link">
                       <span class="header__dropdown-tab-title">
                         Администрирование
                       </span>
@@ -383,7 +387,7 @@
                 </ul>
                 <ul class="header__dropdown-block">
                   <li class="header__dropdown-info-item">
-                    <a href="" class="header__dropdown-info-link"
+                    <a href="https://biz.mail.ru/ad/" class="header__dropdown-info-link"
                       ><span class="header__dropdown-tab-title">
                         Работа с AD
                       </span>
@@ -393,7 +397,7 @@
                     >
                   </li>
                   <li class="header__dropdown-info-item">
-                    <a href="" class="header__dropdown-info-link"
+                    <a href="https://biz.mail.ru/blog/ " class="header__dropdown-info-link"
                       ><span class="header__dropdown-tab-title"> Блог </span>
                       <span class="header__dropdown-tab-subtitle">
                         Статьи о технологиях
@@ -406,20 +410,33 @@
 
               <ul class="header__dropdown-info" data-target="dropdown-info">
                 <li class="header__dropdown-info-item">
-                  <a href="" class="header__dropdown-info-link">Безопасность</a>
+                  <a href="https://biz.mail.ru/onpremise/security" class="header__dropdown-info-link">Безопасность</a>
                 </li>
                 <li class="header__dropdown-info-item">
-                  <a href="" class="header__dropdown-info-link">Партнерам</a>
+                  <a href="https://mail.ru/onpremise/partner" target="_blank" class="header__dropdown-info-link">Партнерам</a>
                 </li>
                 <li class="header__dropdown-info-item">
-                  <a href="" class="header__dropdown-info-link">Мероприятия</a>
+                  <a href="https://biz.mail.ru/events" target="_blank" class="header__dropdown-info-link">Мероприятия</a>
                 </li>
               </ul>
             
           </div>
         </li>
+          <li class="header__item header__item_mobile">
+           <ul class="header__dropdown-info header__dropdown-info_mobile" data-target="dropdown-info">
+                <li class="header__dropdown-info-item">
+                  <a href="" class="header__dropdown-info-link">Безопасность</a>
+                </li>
+                <li class="header__dropdown-info-item">
+                  <a href="https://mail.ru/onpremise/partner" target="_blank" class="header__dropdown-info-link">Партнерам</a>
+                </li>
+                <li class="header__dropdown-info-item">
+                  <a href="https://biz.mail.ru/events" target="_blank" class="header__dropdown-info-link">Мероприятия</a>
+                </li>
+              </ul>
+        </li>
       </ul>
-      <div class="header__login">Вход</div>
+      <a href="#" class="header__login hide" data-target="login">Вход</a>
     </div>
   </div>
 </header>

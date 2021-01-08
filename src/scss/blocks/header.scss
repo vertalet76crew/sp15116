@@ -1,28 +1,31 @@
 .header {
-  @import '../main/variables';
-  @import '../main/variables.colors';
-  @import '../main/variables.fonts';
+  @import "../main/variables";
+  @import "../main/variables.colors";
+  @import "../main/variables.fonts";
 
-  ul li {
-    list-style: none;
-  }
+  position: absolute;
+  background: $color-dark;
+  width: 100%;
+  z-index: 10;
   background-color: $color-dark;
 
   @media (min-width: $desktop) {
     position: relative;
-  }
-  @media (min-width: $desktop-l) {
     padding-top: 34px;
   }
 
+  ul li {
+    list-style: none;
+  }
   &__container {
     display: flex;
-
+    padding: 20px 10px;
     flex-direction: column;
     @media (min-width: $desktop) {
       justify-content: space-between;
       align-items: center;
       flex-direction: row;
+      padding: 0 80px;
     }
     @media (min-width: $desktop-l) {
       max-width: 1360px;
@@ -31,7 +34,26 @@
       box-sizing: border-box;
     }
   }
+  &__box {
+    display: flex;
+    align-items: center;
+    @media (min-width: $desktop) {
+      display: block;
+    }
+  }
 
+  &__button {
+    width: 16px;
+    height: 16px;
+    background: url($img + "/closeNew.svg") no-repeat center;
+    margin-right: 26px;
+    &_open {
+      background-image: url($img + "/burger.svg");
+    }
+    @media (min-width: $desktop) {
+      display: none;
+    }
+  }
   &__logo {
     display: block;
     position: relative;
@@ -46,7 +68,9 @@
       position: static;
       height: 34px;
     }
-
+    @media (min-width: $desktop) {
+      width: 170px;
+    }
     @media (min-width: $desktop-l) {
       height: 55px;
       background-size: 100%;
@@ -57,16 +81,32 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    margin-top: 50px;
     @media (min-width: $desktop) {
       flex-direction: row;
       width: auto;
+      padding-left: 60px;
+      flex: 1;
+      margin-top: 0;
     }
   }
 
   &__row {
     display: flex;
+    align-items: center;
+    padding: 0 10px;
+    @media (min-width: $desktop) {
+      padding: 0;
+    }
   }
 
+  &__arrow {
+    transition: all ease 0.1s;
+    transform-origin: center;
+  }
   &__item {
     font-weight: 500;
     color: $color-white;
@@ -76,8 +116,10 @@
     cursor: pointer;
     transition: background ease 0.2s;
     text-decoration: none;
+    margin-bottom: 48px;
 
     @media (min-width: $desktop) {
+      margin-bottom: 0;
       display: flex;
       align-items: center;
       padding: 10px 20px;
@@ -87,9 +129,20 @@
       margin-right: 24px;
     }
 
-    &:hover,
+    &_mobile {
+      @media (min-width: $desktop) {
+        display: none;
+      }
+    }
+
     &.active {
-      background-color: $color-menu-hover;
+      @media (min-width: $desktop) {
+        background-color: $color-menu-hover;
+      }
+      .header__arrow {
+        transform: rotate(180deg);
+        transform-origin: center;
+      }
     }
 
     &:last-child {
@@ -104,23 +157,38 @@
 
   &__login {
     font-weight: 500;
-    color: $color-indigo;
+    color: $color-white;
     font-size: $font-size-15;
+    padding-left: 10px;
     line-height: $line-height-20;
+    display: inline-block;
+    max-width: 80px;
+    text-decoration: none;
+    @media (min-width: $desktop) {
+      color: $color-indigo;
+      padding-left: 0;
+      max-width: none;
+    }
   }
-
+  .hide {
+    @media (max-width: $desktop) {
+      display: none;
+    }
+  }
   &__dropdown {
     width: 100%;
     left: 0;
     top: 100%;
-    padding: 30px 0;
-    box-shadow: 0 52px 81px rgba(7, 8, 8, 0.48);
+    padding: 30px 0 0;
     z-index: 5;
-    background-color: $color-dark;
     transition: all ease 0.1s;
     display: none;
     @media (min-width: $desktop) {
       position: absolute;
+      background-color: $color-dark;
+      box-shadow: 0 56px 34px rgba(7, 8, 8, 0.48);
+      padding: 30px 0;
+      min-height: 405px;
     }
 
     &.show {
@@ -143,6 +211,19 @@
       border-left: 1px solid rgba(255, 255, 255, 0.4);
       margin: 0;
       align-self: flex-start;
+      display: none;
+      @media (min-width: $desktop) {
+        display: block;
+        margin-top: 8px;
+      }
+      &_mobile {
+        display: block;
+        padding-left: 10px;
+        border: none;
+        @media (min-width: $desktop) {
+          display: none;
+        }
+      }
 
       &-item {
         font-weight: 500;
@@ -173,8 +254,13 @@
     &-panel {
       &-item {
         display: flex;
-        margin-bottom: 40px;
-        padding: 8px 0;
+        padding: 0;
+        margin-bottom: 38px;
+        text-decoration: none;
+        @media (min-width: $desktop) {
+          margin-bottom: 40px;
+          padding: 8px 0;
+        }
 
         &:last-child {
           margin-bottom: 0;
@@ -196,6 +282,20 @@
         line-height: $line-height-20;
         display: block;
         font-weight: 500;
+        &_mobile {
+          font-weight: 400;
+          color: $color-white;
+          font-size: $font-size-13;
+          line-height: $line-height-18;
+          display: block;
+          color: $color-indigo;
+          @media (min-width: $desktop) {
+            font-weight: 500;
+            color: $color-white;
+            font-size: $font-size-15;
+            line-height: $line-height-20;
+          }
+        }
       }
 
       &-subtitle {
@@ -214,7 +314,6 @@
     padding: 0;
 
     &-item {
-      padding: 8px 16px;
       border-radius: 8px;
       transition: background ease 0.3s;
       cursor: pointer;
