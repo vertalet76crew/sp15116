@@ -1,7 +1,7 @@
 .header {
-  @import "../main/variables";
-  @import "../main/variables.colors";
-  @import "../main/variables.fonts";
+  @import '../main/variables';
+  @import '../main/variables.colors';
+  @import '../main/variables.fonts';
 
   position: absolute;
   background: $color-dark;
@@ -17,6 +17,7 @@
   ul li {
     list-style: none;
   }
+
   &__container {
     display: flex;
     padding: 20px 10px;
@@ -34,6 +35,7 @@
       box-sizing: border-box;
     }
   }
+
   &__box {
     display: flex;
     align-items: center;
@@ -47,6 +49,7 @@
     height: 16px;
     background: url($img + "/closeNew.svg") no-repeat center;
     margin-right: 26px;
+
     &_open {
       background-image: url($img + "/burger.svg");
     }
@@ -54,6 +57,7 @@
       display: none;
     }
   }
+
   &__logo {
     display: block;
     position: relative;
@@ -107,6 +111,7 @@
     transition: all ease 0.1s;
     transform-origin: center;
   }
+
   &__item {
     font-weight: 500;
     color: $color-white;
@@ -139,6 +144,7 @@
       @media (min-width: $desktop) {
         background-color: $color-menu-hover;
       }
+
       .header__arrow {
         transform: rotate(180deg);
         transform-origin: center;
@@ -170,11 +176,13 @@
       max-width: none;
     }
   }
+
   .hide {
     @media (max-width: $desktop) {
       display: none;
     }
   }
+
   &__dropdown {
     width: 100%;
     left: 0;
@@ -216,6 +224,7 @@
         display: block;
         margin-top: 8px;
       }
+
       &_mobile {
         display: block;
         padding-left: 10px;
@@ -282,9 +291,9 @@
         line-height: $line-height-20;
         display: block;
         font-weight: 500;
+
         &_mobile {
           font-weight: 400;
-          color: $color-white;
           font-size: $font-size-13;
           line-height: $line-height-18;
           display: block;

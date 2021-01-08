@@ -1,6 +1,6 @@
-@import "../main/variables";
-@import "../main/variables.colors";
-@import "../main/variables.fonts";
+@import '../main/variables';
+@import '../main/variables.colors';
+@import '../main/variables.fonts';
 
 .r-tabs .r-tabs-nav {
   margin: 0;
@@ -20,6 +20,7 @@
 .r-tabs .r-tabs-accordion-title {
   display: none;
   margin-bottom: 38px;
+
   &:nth-child(8) {
     margin-bottom: 0;
   }
@@ -30,18 +31,23 @@
     margin-bottom: 0;
   }
 }
+
 .r-tabs .r-tabs-panel.r-tabs-state-active {
   display: block;
 }
+
 .r-tabs .r-tabs-state-default {
   margin-bottom: 38px;
 }
+
 .r-tabs .r-tabs-state-active {
   margin-bottom: 27px;
+
   &:nth-child(8) {
     margin-bottom: 27px;
   }
 }
+
 /* Accordion responsive breakpoint */
 @media only screen and (max-width: 768px) {
   .r-tabs .r-tabs-nav {
@@ -50,6 +56,7 @@
 
   .r-tabs .r-tabs-accordion-title {
     display: block;
+
     .header__dropdown-tab-title {
       font-size: $font-size-13;
       line-height: $line-height-18;
@@ -59,6 +66,7 @@
         line-height: $line-height-20;
       }
     }
+
     .header__dropdown-tab-subtitle_mobile {
       display: none;
       @media (min-width: $desktop) {
@@ -126,8 +134,9 @@
   @media (min-width: $desktop) {
     display: block;
   }
+
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     right: -10px;
     top: 50%;
@@ -174,9 +183,6 @@ button {
 
   border: 0;
   border-radius: 3px;
-  border-radius: 3px;
-  border-radius: 3px;
-
   cursor: pointer;
 }
 

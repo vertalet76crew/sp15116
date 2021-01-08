@@ -4,7 +4,6 @@ import $ from "jquery";
 
 import menu from "./blocks/menu";
 import formRequest from "./blocks/form-request";
-// import "jquery-ui-bundle";
 import "./blocks/responsiveTabs";
 
 $(function () {
