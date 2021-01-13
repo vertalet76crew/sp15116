@@ -5,21 +5,21 @@
 
   color: $color-light;
   background: $color-dark;
-  padding-top: 104px;
+  padding-top: 160px;
   padding-bottom: 160px;
 
   @media (min-width: $tablet) {
-    padding-top: 121px;
+    padding-top: 180px;
     padding-bottom: 180px;
   }
 
   @media (min-width: $desktop) {
-    padding-top: 64px;
+    padding-top: 123px;
     padding-bottom: 120px;
   }
 
   @media (min-width: $desktop-l) {
-    padding-top: 75px;
+    padding-top: 164px;
     padding-bottom: 136px;
   }
 

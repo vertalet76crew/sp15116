@@ -1,53 +1,78 @@
+/** menu.js **/
 import $ from 'jquery';
 
-function menu() {
-    const $tabProducts = $('[data-target="products"]');
-    const $tabSolutions = $('[data-target="solutions"]');
-    const $tabResources = $('[data-target="resources"]');
+function menu(isMobile) {
+    const $nav = $('[data-block="nav"]');
+    const $menu = $('[data-block="menu"]');
+    const $body = $('body');
+    const $html = $('html');
+    let baseClassesList = [];
 
-    const $button = $('[data-target="open"]');
-    const $login = $('[data-target="login"]');
-    const $menu = $('[data-target="menu"]');
+    function closeMenu() {
+        $nav.removeClass('nav_open');
 
-    $button.on('click', function() {
-        $button.toggleClass('header__button_open');
-        $login.toggleClass('hide');
-        $menu.toggleClass('hide');
+        if (baseClassesList.length) {
+            baseClassesList.forEach(element => {
+                $menu.find('.'+ element +'_open')
+                    .removeClass(element + '_open');
+            });
+            baseClassesList = [];
+        }
+
+        if (isMobile) {
+            $html.removeClass('overflow-hidden');
+        } else {
+            $body.removeClass('overflow-hidden');
+        }
+    }
+
+    $body.on('click', '[data-target="menu"]', function(e) {
+        $nav.toggleClass('nav_open');
+
+        if (isMobile) {
+            $html.toggleClass('overflow-hidden');
+        } else {
+            $body.toggleClass('overflow-hidden');
+        }
+
+        e.preventDefault();
     });
 
-    $('body').on('click', function(e) {
-        if (!$(e.target).closest('[data-target="dropdown"]').length) {
-            if ($(e.target).closest('[data-target="products"]').length) {
-                $tabProducts.toggleClass('active');
-                $tabSolutions.removeClass('active');
-                $tabResources.removeClass('active');
-                $tabProducts.find('[data-target="dropdown"]').toggleClass('show');
-                $tabSolutions.find('[data-target="dropdown"]').removeClass('show');
-                $tabResources.find('[data-target="dropdown"]').removeClass('show');
-            } else if ($(e.target).closest('[data-target="solutions"]').length) {
-                $tabSolutions.toggleClass('active');
-                $tabProducts.removeClass('active');
-                $tabResources.removeClass('active');
-                $tabSolutions.find('[data-target="dropdown"]').toggleClass('show');
-                $tabProducts.find('[data-target="dropdown"]').removeClass('show');
-                $tabResources.find('[data-target="dropdown"]').removeClass('show');
-            } else if ($(e.target).closest('[data-target="resources"]').length) {
-                $tabResources.toggleClass('active');
-                $tabSolutions.removeClass('active');
-                $tabProducts.removeClass('active');
-                $tabResources.find('[data-target="dropdown"]').toggleClass('show');
-                $tabProducts.find('[data-target="dropdown"]').removeClass('show');
-                $tabSolutions.find('[data-target="dropdown"]').removeClass('show');
-            } else {
-                $tabResources.removeClass('active');
-                $tabSolutions.removeClass('active');
-                $tabProducts.removeClass('active');
-                $tabResources.find('[data-target="dropdown"]').removeClass('show');
-                $tabProducts.find('[data-target="dropdown"]').removeClass('show');
-                $tabSolutions.find('[data-target="dropdown"]').removeClass('show');
+    $(document).on('click', function(e) {
+        console.log($(e.target).closest('.header').length);
+
+        if (!window.matchMedia('(hover: hover)').matches) {
+            if (!$(e.target).closest('.header').length) {
+                closeMenu();
             }
         }
+        e.stopPropagation();
     });
+
+    $menu.on('click', '[data-target="child"]', function(e) {
+        const $item = $(this).parent();
+        const baseClass = $item[0].dataset.baseClass;
+
+        if (window.matchMedia('(max-width: 1019px)').matches ||
+            !window.matchMedia('(hover: hover)').matches) {
+            if (baseClass) {
+                $item.toggleClass(baseClass + '_open')
+                    .siblings()
+                    .removeClass(baseClass + '_open');
+
+                if (!baseClassesList.find((i) => i === baseClass)) {
+                    baseClassesList.push(baseClass);
+                }
+            }
+        }
+        e.preventDefault();
+    });
+
+    if (isMobile) {
+        window.addEventListener('orientationchange', closeMenu, false);
+    } else {
+        $(window).resize(closeMenu);
+    }
 }
 
 export default menu;

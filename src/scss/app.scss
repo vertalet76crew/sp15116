@@ -4,10 +4,8 @@
 @import 'main/main';
 
 @import 'blocks/page';
-@import 'blocks/responsiveTabs.scss';
-@import 'blocks/header';
+
 @import 'blocks/footer';
-// @import 'blocks/menu';
 @import 'blocks/button';
 @import 'blocks/form';
 @import 'blocks/popup';
@@ -19,3 +17,10 @@
 @import 'blocks/advantages';
 @import 'blocks/training';
 @import 'blocks/help';
+
+@import 'blocks/header';
+@import 'blocks/nav';
+@import 'blocks/menu';
+
+@import 'blocks/soc';
+@import 'blocks/nav-social';
