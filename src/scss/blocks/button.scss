@@ -85,5 +85,13 @@
     color: $color-link;
     padding: 0;
     height: auto;
+    font-size: $font-size-15;
+    @media (min-width: $desktop) {
+      font-size: $font-size-17;
+    }
+
+    &:hover {
+      background-color: transparent;
+    }
   }
 }

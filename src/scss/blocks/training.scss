@@ -90,37 +90,16 @@
         left: 20px;
         top: 20px;
         background-color: $color-black;
-        width: 40px;
-        height: 18px;
-        border-radius: 9px;
+        width: 68px;
+        height: 30px;
+        border-radius: 16px;
         display: flex;
         justify-content: center;
         align-items: center;
         color: $color-white;
-        font-size: $font-size-8;
-        line-height: $line-height-14;
-        @media (min-width: $tablet) {
-          width: 35px;
-          height: 15px;
-          left: 20px;
-          top: 20px;
-        }
-        @media (min-width: $desktop) {
-          width: 44px;
-          height: 20px;
-          font-size: $font-size-10;
-          line-height: $line-height-18;
-          left: 32px;
-          top: 32px;
-        }
-        @media (min-width: $desktop-l) {
-          width: 60px;
-          height: 25px;
-          font-size: $font-size-14;
-          line-height: $line-height-24;
-          left: 40px;
-          top: 24px;
-        }
+        font-size: $font-size-15;
+        line-height: 1;
+        font-weight: 500;
       }
 
       &::after {

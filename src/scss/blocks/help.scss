@@ -25,7 +25,6 @@
 
   &__container {
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
     @media (min-width: $tablet) {
       flex-direction: row;
@@ -39,25 +38,29 @@
     @media (min-width: $tablet) {
       text-align: left;
       margin-bottom: 0;
-      max-width: 388px;
+      max-width: 348px;
     }
     @media (min-width: $desktop) {
-      max-width: 425px;
+      max-width: 472px;
     }
     @media (min-width: $desktop-l) {
-      max-width: 640px;
+      max-width: 720px;
     }
 
     &_right {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
+      @media (min-width: $mobile) {
+        justify-content: normal;
+      }
 
       @media (min-width: $tablet) {
-        max-width: 224px;
+        max-width: 300px;
         margin-bottom: 0;
       }
       @media (min-width: $desktop) {
-        max-width: 280px;
+        max-width: 289px;
       }
       @media (min-width: $desktop-l) {
         max-width: 370px;

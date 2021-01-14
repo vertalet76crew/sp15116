@@ -89,6 +89,7 @@
         text-align: left;
         font-size: $font-size-20;
         line-height: $line-height-26;
+        max-width: 230px;
       }
     }
 
@@ -142,6 +143,13 @@
       line-height: $line-height-60;
       margin-bottom: 22px;
       max-width: 835px;
+    }
+  }
+
+  &__br {
+    display: none;
+    @media (min-width: $mobile) {
+      display: block;
     }
   }
 
