@@ -208,7 +208,7 @@
   }
 
   &__date-container {
-    font-weight: 500;
+    font-weight: 400;
     color: $color-white;
     display: flex;
     max-width: 154px;
@@ -218,6 +218,7 @@
     font-family: 'Mail_Sans_Roman', sans-serif;
     flex-direction: column;
     @media (min-width: $tablet) {
+      font-weight: 500;
       flex-direction: row;
       max-width: 180px;
     }

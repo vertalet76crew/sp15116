@@ -86,6 +86,10 @@
     padding: 0;
     height: auto;
     font-size: $font-size-15;
+    margin: 0 auto;
+    @media (min-width: $tablet) {
+      margin: 0;
+    }
     @media (min-width: $desktop) {
       font-size: $font-size-17;
     }
